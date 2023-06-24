@@ -33,36 +33,37 @@ public class MainActivity extends AppCompatActivity {
         boton1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                moveToSecondActivity();
+                moveToSecondActivity(imagen1);
             }
         });
 
         boton2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                moveToSecondActivity();
+                moveToSecondActivity(imagen2);
             }
         });
 
         boton3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                moveToSecondActivity();
+                moveToSecondActivity(imagen3);
             }
         });
 
         boton4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                moveToSecondActivity();
+                moveToSecondActivity(imagen4);
             }
         });
 
 
     }
 
-    public void moveToSecondActivity(){
+    public void moveToSecondActivity(int imagen){
         Intent intent = new Intent(MainActivity.this,SecondActivity.class);
+        intent.putExtra("Clave",imagen);
         startActivity(intent);
     }
 }
