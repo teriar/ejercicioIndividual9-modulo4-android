@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
         ImageButton boton2 = findViewById(R.id.Button2);
         ImageButton boton3 = findViewById(R.id.Button3);
         ImageButton boton4 = findViewById(R.id.Button4);
+        Button botonSalir = findViewById(R.id.buttonSalir);
 
         boton1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -55,6 +56,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 moveToSecondActivity(imagen4);
+            }
+        });
+
+
+        botonSalir.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                System.exit(0);
             }
         });
 
